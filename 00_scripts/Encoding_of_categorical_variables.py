@@ -93,7 +93,7 @@ numerical_columns = numerical_columns_selector(data)
 numerical_columns
 
 preprocessor = ColumnTransformer([
-    ('one-hot-encoder', categorical_preprocessor, categorical_columns),
+    ('one_hot_encoder', categorical_preprocessor, categorical_columns),
     ('standard_scaler', numerical_preprocessor, numerical_columns)])
 
 model = make_pipeline(preprocessor, LogisticRegression(max_iter=500))
